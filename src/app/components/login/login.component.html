@@ -1,0 +1,45 @@
+<div class="sign-in-component">
+    <div class="container">
+       <h2>Sign In</h2>
+       <form [formGroup]="clientLoginForm">
+          <div class="input-group">
+             <label for="email">Email</label>
+             <input type="email" id="email" name="email" placeholder="Enter your email" formControlName="email" required>
+          </div>
+          <div *ngIf="clientLoginForm.controls['email'].invalid && (clientLoginForm.controls['email'].dirty || clientLoginForm.controls['email'].touched)"
+             class="error-message">
+             <div *ngIf="clientLoginForm.controls['email'].errors?.['required']">
+                Email should not blank
+             </div>
+             <div *ngIf="clientLoginForm.controls['email'].errors?.['pattern']">
+                Enter Valid email
+             </div>
+          </div>
+          <div class="input-group">
+             <label for="password">Password</label>
+             <input type="password" id="password" name="password" placeholder="Enter your password" formControlName="password" required>
+          </div>
+          <!-- Password Validation code -->
+          <div *ngIf="clientLoginForm.controls['password'].invalid && (clientLoginForm.controls['password'].dirty || clientLoginForm.controls['password'].touched)"
+             class="error-message">
+             <div *ngIf="clientLoginForm.controls['password'].errors?.['required']">
+                Password should not blank
+             </div>
+             <!-- <div *ngIf="clientLoginForm.controls['password'].errors?.['maxlength']">
+                Maximum 8 character required
+                </div> -->
+             <div *ngIf="clientLoginForm.controls['password'].errors?.['minlength']">
+                Minium 8 character required
+             </div>
+          </div>
+          <!--End of Password Validation -->
+          <br />
+          <div>
+             <button class="sign-in-button" (click)="signIn()" mat-raised-button color="primary" [disabled]="!clientLoginForm.controls['password'].valid || !clientLoginForm.controls['email'].valid">Sign In</button>
+          </div>
+       </form>
+       <div class="signup-link">
+          <p>Don't have an account? <a class="sign-up" (click)="routeToNewUser()">Sign up Now</a></p>
+       </div>
+    </div>
+ </div>

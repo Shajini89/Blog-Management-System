@@ -1,0 +1,239 @@
+/* .menu-options {
+    display: flex;
+    justify-content: space-between;
+}
+.comment-list {
+    padding: 10px;
+}
+
+.comment-items {
+    padding: 10px;
+}
+
+.comment-items .content {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+h2
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.comment-items .user-name {
+    display: flex;
+}
+.comment-items .user-name .mat-icon{
+    margin-right: 5px;
+}
+.update-delete-button {
+    text-align: right;
+}
+
+.update-delete-button .mdc-button {
+    margin-right: 5px;
+
+} */
+ /* General Styles */
+/* General Styles */
+/* General Styles */
+/* General Page Styling */
+
+
+.blog-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f7f6; /* Light gray background for the blog container */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Header Styling (Blog Title) */
+.post-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FF5722; /* Vibrant orange-red for the title */
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 2s ease-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Post Content */
+.post-content {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.post-content:hover {
+    background-color: #f1f1f1; /* Light hover effect on content */
+    transform: scale(1.02); /* Slight scale-up on hover */
+}
+
+/* Admin Buttons */
+.admin-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.admin-btn {
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.update-btn {
+    background-color: #3f51b5; /* Vibrant Blue for Update button */
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336; /* Vibrant Red for Delete button */
+    color: white;
+}
+
+.admin-btn:hover {
+    transform: scale(1.05);
+}
+
+.update-btn:hover {
+    background-color: #303f9f; /* Darker blue for Update */
+}
+
+.delete-btn:hover {
+    background-color: #c62828; /* Darker red for Delete */
+}
+
+/* Reaction Buttons */
+.reaction-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.reaction-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.reaction-item mat-icon {
+    color: #009688; /* Default teal color */
+}
+
+.reaction-item:hover mat-icon {
+    color: #FF5722; /* Change to vibrant red on hover */
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+
+/* Comment Section */
+.comment-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.comment-items {
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comment-items:hover {
+    transform: scale(1.02); /* Slight scale-up on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.comment-content {
+    font-size: 1.1rem;
+    color: #00bcd4; /* Cyan color for the comment text */
+    margin-bottom: 10px;
+}
+
+.comment-user {
+    font-size: 1rem;
+    color: #4caf50; /* Green color for the user's name */
+    display: flex;
+    align-items: center;
+}
+
+.comment-user mat-icon {
+    margin-right: 8px;
+}
+
+/* Separator (Horizontal Lines) */
+.separator {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Add Comment Button */
+.add-comment-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.add-comment-btn {
+    padding: 12px 25px;
+    font-weight: bold;
+    background-color: #009688; /* Teal for Add Comment button */
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.add-comment-btn:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    background-color: #00796b; /* Darker teal on hover */
+}
+
+/* Animation for the Whole Page */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+       
+    }}

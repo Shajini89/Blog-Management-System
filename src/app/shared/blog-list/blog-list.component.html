@@ -1,0 +1,51 @@
+
+<!-- <div *ngIf="blogList.length === 0">
+    There is no any blog available.
+</div>
+
+<div *ngIf="blogList.length > 0" class="main-list">
+    <div *ngFor="let blog of blogList">
+        <div class="card" (click)="openBlogDetail(blog)">
+            <div class="card__header">
+              <img [src]="blog?.postImage" alt="card__image" class="card__image" width="600">
+            </div>
+            <div class="card__body">
+              <span class="tag tag-red">{{blog?.category}}</span>
+              <div class="title">{{blog?.postTitle}}</div>
+            </div>
+            <div class="card__footer">
+              <div class="user">
+                <mat-icon>account_circle</mat-icon>
+                <div class="user__info">
+                  <h5>{{blog?.user?.userName}}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div> -->
+<div *ngIf="blogList.length === 0" class="no-blogs-message">
+  <p>There are no blogs available.</p>
+</div>
+
+<div *ngIf="blogList.length > 0" class="main-list">
+  <div *ngFor="let blog of blogList" class="blog-item">
+      <div class="card" (click)="openBlogDetail(blog)">
+          <div class="card__header">
+              <img [src]="blog?.postImage" alt="blog-image" class="card__image" width="100%">
+          </div>
+          <div class="card__body">
+              <span class="tag tag-red">{{blog?.category}}</span>
+              <h3 class="title">{{blog?.postTitle}}</h3>
+          </div>
+          <div class="card__footer">
+              <div class="user">
+                  <mat-icon>account_circle</mat-icon>
+                  <div class="user__info">
+                      <h5>{{blog?.user?.userName}}</h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

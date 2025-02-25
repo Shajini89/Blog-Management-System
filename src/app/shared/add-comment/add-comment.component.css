@@ -1,0 +1,102 @@
+/* .close {
+    text-align: right;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.comment-part {
+    display: flex;
+    align-items: center;
+} */
+ /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.comment-part {
+    background: rgba(0, 0, 0, 0.1); /* Light transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    transition: background 0.3s ease;
+}
+
+.comment-part:hover {
+    background: rgba(0, 0, 0, 0.2); /* Slightly darker on hover */
+}
+
+/* Label Styling */
+label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Textarea Styling */
+textarea {
+    width: 100%;
+    background-color: #f5f5f5; /* Soft background color */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 10px;
+    color: #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    resize: vertical;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus and Hover Effects */
+textarea:focus {
+    background-color: #ffffff;
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Close Icon Styling */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4c4c;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close:hover {
+    background-color: #e13b3b;
+}
+
+/* Submit Button Styling */
+.submit-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #6e7dff, #4b5eea);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #4b5eea, #6e7dff);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1.02);
+}

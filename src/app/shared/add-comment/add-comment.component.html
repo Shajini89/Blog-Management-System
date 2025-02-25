@@ -1,0 +1,20 @@
+<!-- <div class="close" (click)="closeDialog()">
+    <mat-icon>close</mat-icon>
+</div>
+<div class="comment-part">
+    Comment:
+    <textarea [(ngModel)]="content" rows="10" cols="90"></textarea>
+</div>
+<div>
+    <button mat-raised-button  color="primary" (click)="addComment()">Submit</button>
+</div> -->
+<div class="close" (click)="closeDialog()">
+    <mat-icon>close</mat-icon>
+</div>
+<div class="comment-part">
+    <label for="commentInput">Your Comment:</label>
+    <textarea [(ngModel)]="content" id="commentInput" rows="6" cols="80"></textarea>
+</div>
+<div class="submit-button">
+    <button mat-raised-button color="primary" (click)="addComment()">Submit</button>
+</div>

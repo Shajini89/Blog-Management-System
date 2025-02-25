@@ -1,0 +1,143 @@
+/* .main
+{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background-color: #000000;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+.main > .selected {
+    background: maroon;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 10px 0 10px;
+}
+.user-name-item {
+    display: flex;
+    align-items: center;
+}
+
+.main div
+{
+    cursor: pointer;
+}
+.main img {
+    height: 111px;
+    width: 200px;
+} */
+ /* General Reset */
+/* General Reset */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between; /* Distribute items across the width */
+    align-items: center;
+    background: linear-gradient(135deg, #121212, #1e1e1e); /* Darker gradient background */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    animation: backgroundMove 10s ease infinite; /* Background animation */
+}
+
+/* Logo on the left */
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Navigation Links on the left */
+.nav-links {
+    display: flex;
+    gap: 30px; /* Space between the nav items */
+    margin-left: 50px; /* Add some space to the left for positioning */
+}
+
+.nav-item {
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    color: #ffffff; /* White text for contrast */
+}
+
+/* On hover, make the nav items have a subtle glow effect */
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Selected Item Styling */
+.selected {
+    background: rgba(255, 255, 255, 0.3); /* Highlight selected link */
+    transform: scale(1.1);
+}
+
+/* User Menu */
+.user-name-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    color: #ffffff; /* White text for user name */
+}
+
+/* Hover effect on user name */
+.user-name-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Animation for background gradient */
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Mat Menu button styling */
+mat-menu {
+    font-family: 'Roboto', sans-serif;
+}
+
+mat-menu button {
+    padding: 10px;
+    font-size: 1.1rem;
+    color: #333;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+mat-menu button:hover {
+    background-color: #ddd;
+}
+
+/* Mat icon style in menu */
+mat-icon {
+    margin-right: 10px;
+}

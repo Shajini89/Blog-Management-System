@@ -1,0 +1,141 @@
+/* p{
+     font-size: 50px;
+     padding-left:30%;
+     padding-top: 5%;
+     font-family: Arial, Helvetica, sans-serif;
+     }
+     .p{
+       padding-top: 0%
+     } */
+     home.component.css
+
+     /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header Section */
+header {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  padding: 80px 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in-out;
+  margin-bottom: 30px;
+}
+header h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-out;
+}
+header p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  opacity: 0.8;
+  animation: slideIn 1.5s ease-out;
+}
+
+/* Main Content Area */
+.blog-home-content {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeIn 2.5s ease-in-out;
+}
+.blog-home-content h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ff9800;
+  animation: bounceIn 1.5s ease-in-out;
+}
+.blog-home-content p {
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-bottom: 40px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Button Styling */
+.cta-btn {
+  background-color: #ff4081;
+  color: white;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  animation: bounceIn 2s ease-in-out;
+}
+.cta-btn:hover {
+  background-color: #e91e63;
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #ddd;
+  font-size: 1rem;
+  margin-top: 50px;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+      transform: scale(0);
+      opacity: 0;
+  }
+  60% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
